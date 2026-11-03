@@ -141,3 +141,11 @@ C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\refin
 C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\SkladUchet.pdb
 C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\SkladUchet.genruntimeconfig.cache
 C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\ref\SkladUchet.dll
+C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\SkladUchet.sourcelink.json
+C:\Users\user\source\repos\SkladUchet\SkladUchet\bin\Debug\net10.0-windows\MaterialDesignColors.dll
+C:\Users\user\source\repos\SkladUchet\SkladUchet\bin\Debug\net10.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\user\source\repos\SkladUchet\SkladUchet\bin\Debug\net10.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\AddBatchWindow.baml
+C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\App.baml
+C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\AddBatchWindow.g.cs
+C:\Users\user\source\repos\SkladUchet\SkladUchet\obj\Debug\net10.0-windows\SkladUchet_Content.g.cs

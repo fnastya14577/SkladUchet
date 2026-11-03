@@ -17,6 +17,8 @@ public class MainViewModel : INotifyPropertyChanged
     public ObservableCollection<Product> Products { get; } = new();
     public ObservableCollection<Batch> Alerts { get; } = new();
 
+    public ObservableCollection<WriteOff> WriteOffs { get; } = new();
+
     private Batch? _selectedBatch;
     public Batch? SelectedBatch
     {
@@ -43,7 +45,7 @@ public class MainViewModel : INotifyPropertyChanged
 
     private void LoadData()
     {
-        Batches.Clear(); Alerts.Clear(); Products.Clear();
+        Batches.Clear(); Alerts.Clear(); Products.Clear(); WriteOffs.Clear();
 
         foreach (var b in _db.Batches.Include(b => b.Product).ToList())
         {
@@ -56,6 +58,9 @@ public class MainViewModel : INotifyPropertyChanged
 
         foreach (var p in _db.Products.ToList())
             Products.Add(p);
+
+        foreach (var w in _db.WriteOffs.Include(w => w.Batch).ToList())
+            WriteOffs.Add(w);
 
         StatusText = $"Товаров: {Products.Count} | Партий: {Batches.Count} | " +
                      $"Требуют внимания: {Alerts.Count}";

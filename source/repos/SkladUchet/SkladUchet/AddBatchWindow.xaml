@@ -1,0 +1,64 @@
+﻿<Window x:Class="SkladUchet.AddBatchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="Приёмка товара" Height="500" Width="400"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+           
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Новая партия" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,20">
+            <TextBlock Text="Выберите товар:" Margin="0,0,0,4" Foreground="#757575"/>
+            <ComboBox Name="CmbProducts" DisplayMemberPath="Name" 
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,20">
+            <TextBlock Text="Номер партии:" Margin="0,0,0,4" Foreground="#757575"/>
+            <TextBox Name="TxtBatchNumber" 
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        </StackPanel>
+
+       
+        <Grid Grid.Row="3" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="16"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Количество:" Margin="0,0,0,4" Foreground="#757575"/>
+                <TextBox Name="TxtQuantity" Text="10"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="Годен до:" Margin="0,0,0,4" Foreground="#757575"/>
+                <DatePicker Name="DpExpiryDate" Width="160"/>
+            </StackPanel>
+        </Grid>
+
+      
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button Content="Отмена" Click="BtnCancel_Click" Margin="0,0,12,0" Height="40" Width="100" 
+                    Style="{StaticResource MaterialDesignFlatButton}"/>
+            <Button Content="Сохранить" Click="BtnSave_Click" 
+                    Style="{StaticResource MaterialDesignRaisedButton}" 
+                    Background="#81C784" BorderBrush="#81C784" Height="40" Width="140"/>
+        </StackPanel>
+    </Grid>
+</Window>
