@@ -13,7 +13,8 @@ public partial class MainWindow : Window
 
     private void BtnAdd_Click(object sender, RoutedEventArgs e)
     {
-        var addWindow = new AddBatchWindow { Owner = this };
+        var addWindow = new AddBatchWindow();
+
         if (addWindow.ShowDialog() == true)
         {
             if (DataContext is MainViewModel vm)
